@@ -1,0 +1,379 @@
+@charset "utf-8";
+@import url("reset.css");
+
+
+/* ========== 共用區塊 =========== */
+html, body{ 
+	font-family:Arial, "微軟正黑體","Microsoft JhengHei", sans-serif;
+	height: 100%;
+}
+body{
+	font-size: 90%;
+	color: #121212;
+	font-weight: normal;
+	position: relative;
+} 
+a{ 
+	color: #1f6c60;
+}
+
+img{
+	vertical-align:text-bottom;
+}
+
+.imgfix_w img{ width:100%; height: auto; }
+
+/* *{ -webkit-transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86); transition: all 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86); } */
+/* .real_item_frame *{ -webkit-transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1); transition: all 0.9s cubic-bezier(0.23, 1, 0.32, 1); } */
+*{ 	-webkit-transition: all 0.7s ease-out; transition: all 0.7s ease-out;  }
+
+
+article, section, .item_frame{ height: 100%; position: relative; top: 0; float: left; overflow: hidden; }
+
+.wrapper{  /* 畫面總可視範圍 */
+	width: 100%;
+	height: 100%;
+	height: calc(100% - 37px);
+	overflow: hidden;
+	position: relative;
+	top: 37px;
+	left: 0%;
+}
+.item_frame{   /* 單一項目 */
+	width: 10%; 
+	border-left:1px solid #dadada;
+}
+
+/* ========== header =========== */
+header{
+	width: 100%;
+	min-width: 100%;
+	height: 37px;
+	line-height: 14px;
+	text-align: center;
+	background-color: #424242;
+	position: fixed;
+	z-index: 100;
+	display: block\9;
+	top: 0;
+}
+header table{
+	width: 800px;
+	margin: 0 auto;
+}
+
+
+/* ========== 主頁 =========== */
+
+.item_main{ width: 28%; background: #f1f0ec url(images/main_01.jpg) center center; background-size: cover;  } /* 有商品時背景圖 */
+.item_main{ width: 28%; }
+
+.item_main h1{
+	width: 95%;
+	margin: 4.5% 0 0 4.5%;
+}
+
+.item_main h2{
+	position: absolute;
+	bottom: 15%;
+	left: 4.5%;
+	width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== 單元們 =========== */
+
+.number, .name, .cover_frame, .description{
+	display: block;
+	width: 100%;
+	background: greem;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+.number{ height: 20%; font-size: 500%; }
+.name{ height: 20%; }
+.name h3{  font-size: 120%;  }
+.name .date{ font-size: 75%; line-height: 4em; letter-spacing: 0.25em; }
+.cover_frame{ height: 25%; }
+.cover{ height: 100%; height: 100%; background-size: cover; background-position: center center; position: relative;}
+.description{ height: 35%; line-height: 1.7em; text-align:justify; }
+.item_links{ position: absolute; right: 0; top: 0; opacity: 0;  }
+.item_links a{ display: inline-block; padding: 5px 15px; margin: 5px 3px; float: right; height: 30px; background: #e6605d; color: #fff; border-radius: 2px; }
+.item_links a:hover{ background: #1f6c60; }
+
+
+.cover_links{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.cover_links a{
+	display: block;
+	width: 100%;
+	height: 100%;	
+}
+
+.go_shopping{
+	font-size: 130%;
+	position: absolute;
+	right: 0;
+	margin: 10px 5px;
+	opacity: 0;
+}
+.go_shopping a{
+	display: block;
+	padding: 10px 25px;
+	background: rgba( 0,0,0,0.8);
+	border-radius: 2px;
+	color: #e6605d;
+}
+
+
+/* 選取後狀態 */
+/* 區塊 */
+	.f_check{  }																	
+/* 大編號 */
+	.f_check .number{ height: 8%; font-size: 280%; padding-top: 0; }								
+/* 第一區 */
+	.f_check .name{ height: 12%; padding-top: 0; }																													
+/* 品名 */
+	.f_check .name h3{  font-size: 120%;   }											
+/* 日期 */
+	.f_check .name .date{ font-size: 75%; line-height: 1.4em; letter-spacing: 0.25em;}	
+/* 圖片外框 */
+	.f_check .cover_frame{ height: 60%; } 											
+/* 圖片 */
+	.f_check .cover{ height: 100%; height: 100%; background-size: cover; background-position: center center; } 
+ /* 說明文 */
+	.f_check .description{ height: 20%; line-height: 1.7em; text-align:justify;  }
+
+	.f_check .item_links{ opacity: 1;  }
+
+	.f_check .go_shopping{ opacity: 1; }
+
+.item_1 .cover{ background-image: url(images/cover/1.jpg); }
+.item_2 .cover{ background-image: url(images/cover/1.jpg); }
+.item_3 .cover{ background-image: url(images/cover/1.jpg); }
+.item_4 .cover{ background-image: url(images/cover/1.jpg); }
+.item_5 .cover{ background-image: url(images/cover/1.jpg); }
+.item_6 .cover{ background-image: url(images/cover/1.jpg); }
+.item_7 .cover{ background-image: url(images/cover/1.jpg); }
+.item_8 .cover{ background-image: url(images/cover/1.jpg); }
+.item_9 .cover{ background-image: url(images/cover/1.jpg); }
+.item_10 .cover{ background-image: url(images/cover/1.jpg); }
+.item_11 .cover{ background-image: url(images/cover/1.jpg); }
+	
+.f_check .cover_s{ background-position: center -50px; } /* 切到頭圖往下移動 */
+
+
+
+/* ========== footer =========== */
+footer{ clear:both; width: 100%; font-size: 70%; text-align: center; margin: 0 auto; color: #6f6f6f; background: rgba(255,255,255,0.7); padding: 2px; position: fixed; z-index: 15; bottom: 0; height: 13px; }
+
+/* ========== UI & inline =========== */
+.bt_pre{ position: fixed; left: 0; top: 40%; opacity: 0; }
+.bt_next{ position: fixed; right: 0; top: 40%; }
+.bt_pre a{ 
+	display: block; width: 90px; height: 60px; background: url(../images/arron_left.png) left center no-repeat; 
+	-moz-animation: gopre 0.7s ease-out infinite;
+	-webkit-animation: gopre 0.7s ease-out infinite;
+	animation: gopre 0.7s ease-out infinite;
+	}
+.bt_next a{ 
+	display: block; width: 90px; height: 60px; background: url(../images/arron_right.png) right center no-repeat; 
+	-moz-animation: gonext 0.7s ease-out infinite;
+	-webkit-animation: gonext 0.7s ease-out infinite;
+	animation: gonext 0.7s ease-out infinite;
+}
+
+.pc_view{ display: block;}
+.mobile_view{ display: none;}
+
+.clearfix{ display: block;  clear: both; }
+.imgfix_w img{ width:100%; height: auto; }
+
+.font_important{ }
+.font_default{ }
+.font_main{ }
+.font_second{ color: #dadada; }
+
+
+/******************************************* 動畫  *****************************/
+.animation_element{ -webkit-transition: all 0.3s ease-out; transition: all 0.3s ease-out; }
+.animation_element2{ -webkit-transition: all 1.5s ease-out; transition: all 1.5s ease-out; }
+
+@-webkit-keyframes gonext{
+    0%  { background-position: right center; }
+    50%  {  background-position: left center; }
+    80%  {  background-position: left center; }
+    100%  {  background-position: right center; }
+}
+@keyframes gonext{
+    0%  { background-position: right center; }
+    50%  {  background-position: left center; }
+    80%  {  background-position: left center; }
+    100%  {  background-position: right center; }
+}
+@-webkit-keyframes gopre{
+    0%  { background-position: left center; }
+    50%  {  background-position: right center; }
+    80%  {  background-position: right center; }
+    100%  {  background-position: left center; }
+}
+@keyframes gopre{
+    0%  { background-position: left center; }
+    50%  {  background-position: right center; }
+    80%  {  background-position: right center; }
+    100%  {  background-position: left center; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************************
+	MOBILE
+****************************************************************/
+@media screen and ( max-width: 760px ){
+
+/* ========== 共用區塊 =========== */
+html, body{ 
+	min-width: 320px;
+	overflow: auto;
+	overflow-x: hidden;
+}
+article{ position: relative; display: block\9; width: 100%; min-width: 320px;}
+section{ position: relative; display: block\9; width: 100%; margin: 0 auto;}
+
+/* ========== 00 header =========== */
+header{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+
+/* ========== 01 視覺 =========== */
+.wrapper{  /* 畫面總可視範圍 */
+	overflow-x: auto;
+	top: 0px;
+	-webkit-overflow-scrolling:touch;
+}
+
+.item_main{ background: #f1f0ec url(images/main_01.jpg) 75% center; background-size: cover;  }
+
+.item_main h1{
+	width: 95%;
+	margin: 4.5% 2.5%;
+}
+.item_main h2{
+	position: absolute;
+	bottom: auto;
+	top: 30%;
+	left: 2.5%;
+	width: 64.5%;
+}
+
+
+
+
+
+.item_frame{   /* 單一項目 */
+	overflow-y: auto;
+	-webkit-overflow-scrolling:touch;
+}
+.item_main img{ /* temp */
+	width: 100%;
+	height: auto;
+}
+
+
+																
+/* 大編號 */
+	.f_check .number{ height: 8%; font-size: 280%; padding-top: 0; }								
+/* 第一區 */
+	.f_check .name{ height: 13%; padding-top: 0; }																													
+/* 品名 */
+	.f_check .name h3{  font-size: 95%;   }											
+/* 日期 */
+	.f_check .name .date{ font-size: 70%; line-height: 1.4em; letter-spacing: 0.25em;}	
+/* 圖片外框 */
+	.f_check .cover_frame{ height: 48%; } 											
+/* 圖片 */
+	.f_check .cover{ height: 100%; height: 100%; background-size: cover; background-position: center center; } 
+ /* 說明文 */
+	.f_check .description{ height: auto; min-height: 30%; line-height: 1.7em; text-align:justify;  }
+
+	.f_check .item_links{ opacity: 1;  }
+
+
+
+
+
+
+/* ========== 08 footer =========== */
+footer{ font-size: 55%; margin: 0 auto; display: none;}
+
+/* ========== 09 UI & inline =========== */
+.pc_view{ display: none;}
+.mobile_view{ display: block;}
+
+
+
+}
+
+
+
+
+/* ============================================  note  ============================================================================================= */
+/***********************
+	淺灰 #dadada -格線
+	
+	藍紫色 #0b5d58 -狗
+	紫紅色 #b81625 -貓
+	咖啡色 #603814 -link
+***********************/
